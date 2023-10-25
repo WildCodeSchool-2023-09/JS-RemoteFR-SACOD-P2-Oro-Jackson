@@ -1,3 +1,5 @@
+import videoBackground from "../assets/V.mp4";
+
 function Home() {
   return (
     <div>
@@ -7,16 +9,16 @@ function Home() {
             <p>Home</p>
           </li>
           <li>
-            <p>Make a drink</p>
+            <a href="/makeadrink">Make a drink</a>
           </li>
           <li>
-            <p>Contact</p>
+            <a href="/contacts">Contact</a>
           </li>
         </ul>
       </nav>
       <div className="video-container">
         <video autoPlay loop muted className="background-video">
-          <source src="" type="" />
+          <source src={videoBackground} type="video/mp4" />
         </video>
       </div>
     </div>
