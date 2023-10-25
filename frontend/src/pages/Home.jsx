@@ -1,4 +1,5 @@
 import videoBackground from "../assets/V.mp4";
+import "./Home.css";
 
 function Home() {
   return (
