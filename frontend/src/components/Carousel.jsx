@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Carousel.css";
+import "./Carousel.scss";
 
 function MyCarousel() {
   return (
@@ -58,7 +58,7 @@ function MyCarousel() {
       swipeable
     >
       <div className="item">
-        <img src="https://picsum.photos/200/300?random=1" alt="testest" />
+        <img src="https://picsum.photos/350?random=1" alt="testest" />
         <div className="itemContent">
           <h2>Pierre le BG</h2>
           <p>
@@ -68,7 +68,7 @@ function MyCarousel() {
         </div>
       </div>
       <div className="item">
-        <img src="https://picsum.photos/200/300?random=2" alt="testest" />
+        <img src="https://picsum.photos/350?random=2" alt="testest" />
         <div className="itemContent">
           <h2>Pierre le BG</h2>
           <p>
@@ -78,7 +78,7 @@ function MyCarousel() {
         </div>
       </div>
       <div className="item">
-        <img src="https://picsum.photos/200/300?random=3" alt="testest" />
+        <img src="https://picsum.photos/350?random=3" alt="testest" />
         <div className="itemContent">
           <h2>Pierre le BG</h2>
           <p>
@@ -88,7 +88,7 @@ function MyCarousel() {
         </div>
       </div>
       <div className="item">
-        <img src="https://picsum.photos/200/300?random=4" alt="testest" />
+        <img src="https://picsum.photos/350?random=4" alt="testest" />
         <div className="itemContent">
           <h2>Pierre le BG</h2>
           <p>
