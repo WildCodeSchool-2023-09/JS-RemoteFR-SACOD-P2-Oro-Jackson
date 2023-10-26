@@ -1,7 +1,6 @@
 import Navbar from "./pages/Navbar";
 import videoBackground from "./assets/V.mp4";
 import "./App.css";
-import MyCarousel from "./components/Carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
           </p>
         </div>
       </div>
-      <MyCarousel />
     </div>
   );
 }
