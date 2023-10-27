@@ -1,0 +1,33 @@
+$primary-color: #181818;
+$secondary-color: #151515;
+$text-color: #f9f9f9;
+$contrast-text: grey;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  line-height: 2.5em;
+  color: $text-color;
+}
+
+h1 {
+  margin-left: 1em;
+  margin-top: 0.2em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1em;
+}
+
+li {
+  padding: 0.5em;
+}
+
+li:hover {
+  background-color: $secondary-color;
+  color: $contrast-text;
+}
