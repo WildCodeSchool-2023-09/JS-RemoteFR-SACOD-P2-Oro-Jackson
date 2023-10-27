@@ -1,32 +1,33 @@
+$primary-color: #181818;
+$secondary-color: #151515;
+$text-color: #f9f9f9;
+$contrast-text: grey;
+
 .navbar {
-  /*   position: absolute; */
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  line-height: 2.5em;
+  color: $text-color;
 }
 
-.navbar ul {
+h1 {
+  margin-left: 1em;
+  margin-top: 0.2em;
+}
+
+ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-right: 1em;
 }
 
-.navbar li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+li {
+  padding: 0.5em;
 }
 
-.navbar li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-img {
-  width: 150px;
+li:hover {
+  background-color: $secondary-color;
+  color: $contrast-text;
 }

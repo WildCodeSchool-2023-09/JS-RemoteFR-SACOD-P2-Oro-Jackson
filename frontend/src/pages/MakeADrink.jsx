@@ -5,13 +5,14 @@ import MyCarousel from "../components/Carousel";
 
 function MakeADrink() {
   const API = "https://www.thecocktaildb.com/api/json/v2/9973533/random.php";
-  const [cocktail, setCocktail] = useState();
+  const [cocktail, setCocktail] = useState("");
 
   const getCocktail = () => {
     axios.get(API).then((response) => {
       setCocktail(response.data.drinks[0]);
     });
   };
+
   return (
     <div>
       <Navbar />
