@@ -7,7 +7,7 @@ function Contact() {
       <Navbar />
       <div className="form">
         <form action="" method="get">
-          <h2 className="contact_title">Une question ou une recommendation ?</h2>
+          <h2 className="contact_title">Une question ou une recommandation ?</h2>
           <h3 className="contact_subtitle">N’hésites surtout pas à nous contacter, on se fera un plaisir de répondre à ta requête !</h3>
           <div className="input-group">
             <input type="text" name="name" className="input-group_input" required/>

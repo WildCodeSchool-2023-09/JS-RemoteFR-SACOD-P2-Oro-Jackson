@@ -41,7 +41,7 @@ body {
 }
 
 .submit:hover {
-    box-shadow: inset 0px 0px 20px $outline;
+    box-shadow: inset 0px 0px 15px #f9f9f966;
     outline: 1.5px solid $text-color;
     padding: 12px 35px 12px 35px;
     margin: 3px 5px;
@@ -75,7 +75,7 @@ body {
     color: $text-color;
     transition: translate 500ms, scale 500ms;
     background-color: $primary-color;
-    margin-left: 10px;
+    padding-inline: 10px;
 }
 .input-group_input:focus +
 .input-group_label,
@@ -91,7 +91,7 @@ body {
 #name,
 .input-group_input:valid +
 #name {
-    margin-left: 15px;
+    margin-left: 3px;
 }
 
 #msg {
@@ -99,5 +99,20 @@ body {
 }
 
 #msg::-webkit-scrollbar {
-    display: none;
-}
+    width: 10px;
+    margin: 10px;
+  
+    &-track {
+        background: $primary-color;
+        border-radius: 5px;
+    }
+  
+    &-thumb {
+        background: $outline;
+        border-radius: 5px;
+  
+    &:hover {
+        background: $text-color;
+      }
+    }
+  }
