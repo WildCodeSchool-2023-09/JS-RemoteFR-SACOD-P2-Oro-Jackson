@@ -4,6 +4,7 @@ $text-color: #F9F9F9;
 $outline: #f9f9f9c5;
 
 body {
+    font-family: 'Inter', sans-serif;
     background-color: $primary-color;
     color: #F9F9F9;
     margin: 0;
@@ -18,8 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    font-family: 'Inter', sans-serif;
+    margin: 50px 0 50px 0;
     background-color: $primary-color;
     color: $text-color;
 }
@@ -96,4 +96,8 @@ body {
 
 #msg {
     resize: none;
+}
+
+#msg::-webkit-scrollbar {
+    display: none;
 }

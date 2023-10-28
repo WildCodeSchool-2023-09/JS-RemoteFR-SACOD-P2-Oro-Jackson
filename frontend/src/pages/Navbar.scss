@@ -1,0 +1,46 @@
+$primary-color: #181818;
+$navbar-color: #181818ce;
+$secondary-color: #151515;
+$text-color: #F9F9F9;
+$outline: #f9f9f9c5;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  line-height: 3em;
+  color: $text-color;
+  border-bottom: 1px solid $outline;
+}
+
+.navLabel {
+  text-decoration: none; 
+  color: $text-color;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em 0 0;
+}
+
+.navSelect {
+  padding: 1em 1.5em 1em 1.5em;
+}
+
+.navSelect:hover {
+  background-color: $text-color;
+}
+
+.navSelect:hover a {
+  color: $primary-color;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin: 0 0 0 1.5em;
+}

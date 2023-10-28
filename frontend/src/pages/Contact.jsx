@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 function Contact() {
   return (
     <>
+      <Navbar />
       <div className="form">
         <form action="" method="get">
           <h2 className="contact_title">Une question ou une recommendation ?</h2>

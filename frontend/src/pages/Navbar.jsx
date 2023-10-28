@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "./Navbar.scss";
 import logo from "../assets/logo.png";
 
 function Navbar() {
@@ -6,15 +6,21 @@ function Navbar() {
     <div>
       <nav className="navbar">
         <img src={logo} alt="logooooo" />
-        <ul>
-          <li>
-            <a href="/">Home</a>
+        <ul className="navList">
+          <li className="navSelect">
+            <a className="navLabel" href="/">Home</a>
           </li>
-          <li>
-            <a href="/makeadrink">Make a drink</a>
+          <li className="navSelect">
+            <a className="navLabel" href="/makeadrink">Make a drink</a>
           </li>
-          <li>
-            <a href="/contacts">Contact</a>
+          <li className="navSelect" id="hide">
+            <a className="navLabel" href="/makeadrink">Top 10</a>
+          </li>
+          <li className="navSelect" id="hide">
+            <a className="navLabel" href="/makeadrink">Random</a>
+          </li>
+          <li className="navSelect">
+            <a className="navLabel" href="/contacts">Contact</a>
           </li>
         </ul>
       </nav>
