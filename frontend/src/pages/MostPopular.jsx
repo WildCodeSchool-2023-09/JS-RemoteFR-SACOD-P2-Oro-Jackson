@@ -3,7 +3,7 @@ import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
-import "./MostPopular.scss";
+import "../styles/MostPopular.scss";
 
 function MostPopular() {
   const responsive = {

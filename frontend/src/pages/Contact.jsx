@@ -1,4 +1,4 @@
-import "./Contact.scss";
+import "../styles/Contact.scss";
 import Navbar from "./Navbar";
 
 function Contact() {
