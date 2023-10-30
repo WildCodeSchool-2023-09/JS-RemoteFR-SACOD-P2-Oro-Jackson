@@ -1,3 +1,14 @@
+$primary-color: #181818;
+$secondary-color: #151515;
+
+@mixin gradient {
+  background: linear-gradient($primary-color, $secondary-color);
+}
+
+* {
+  margin: 0;
+}
+
 .home-container {
   position: relative;
   width: 100%;
@@ -21,16 +32,16 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1;
 }
 
 .card {
+  @include gradient;
+
   position: absolute;
   right: 10%;
   top: 50%;
   transform: translateY(-50%);
   padding: 20px 40px;
-  background-color: rgba(9, 8, 8, 0.8);
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
