@@ -18,8 +18,8 @@ function Navbar() {
             </a>
           </li>
           <li className="navSelect" id="hide">
-            <a className="navLabel" href="/makeadrink">
-              Top 10
+            <a className="navLabel" href="/mostpopular">
+              Most popular
             </a>
           </li>
           <li className="navSelect" id="hide">

@@ -1,10 +1,11 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
-import "./Carousel.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
+import "./MostPopular.scss";
 
-function MyCarousel() {
+function MostPopular() {
   const responsive = {
     0: { items: 1 },
     568: { items: 2 },
@@ -40,15 +41,18 @@ function MyCarousel() {
 
   return (
     <div>
-      <AliceCarousel
-        infinite
-        mouseTracking
-        items={items}
-        responsive={responsive}
-        controlsStrategy="alternate"
-      />
+      <Navbar />
+      <div>
+        <AliceCarousel
+          infinite
+          mouseTracking
+          items={items}
+          responsive={responsive}
+          controlsStrategy="alternate"
+        />
+      </div>
     </div>
   );
 }
 
-export default MyCarousel;
+export default MostPopular;
