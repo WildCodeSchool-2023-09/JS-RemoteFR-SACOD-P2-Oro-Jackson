@@ -1,33 +1,47 @@
 $primary-color: #181818;
+
+$navbar-color: #181818ce;
 $secondary-color: #151515;
-$text-color: #f9f9f9;
-$contrast-text: grey;
+$text-color: #F9F9F9;
+$outline: #f9f9f9c5;
 
 .navbar {
   display: flex;
   justify-content: space-between;
   background-color: $primary-color;
-  line-height: 2.5em;
+  line-height: 3em;
   color: $text-color;
+  border-bottom: 0.5px solid $outline;
 }
 
-h1 {
-  margin-left: 1em;
-  margin-top: 0.2em;
+.navLabel {
+  text-decoration: none; 
+  color: $text-color;
+  font-style: normal;
+  font-weight: bold;
 }
 
-ul {
+.navList {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-right: 1em;
+  margin: 0 1em 0 0;
 }
 
-li {
-  padding: 0.5em;
+.navSelect {
+  padding: 1em;
 }
 
-li:hover {
-  background-color: $secondary-color;
-  color: $contrast-text;
+.navSelect:hover {
+  background-color: $text-color;
+}
+
+.navSelect:hover a {
+  color: $primary-color;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin: 0 0 0 1.5em;
 }
