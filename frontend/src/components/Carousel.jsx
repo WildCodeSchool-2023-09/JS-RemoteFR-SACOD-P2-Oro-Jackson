@@ -9,7 +9,7 @@ function MyCarousel() {
       arrows
       autoPlaySpeed={3000}
       centerMode={false}
-      className=""
+      className="carourou"
       containerClass="container-with-dots"
       dotListClass=""
       draggable

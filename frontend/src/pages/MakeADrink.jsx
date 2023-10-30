@@ -23,7 +23,9 @@ function MakeADrink() {
         </button>
         <h2>{cocktail.strDrink}</h2>
       </div>
-      <MyCarousel />
+      <div>
+        <MyCarousel />
+      </div>
     </div>
   );
 }
