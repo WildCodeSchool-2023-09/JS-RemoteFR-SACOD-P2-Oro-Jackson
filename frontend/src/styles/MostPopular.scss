@@ -1,14 +1,27 @@
+/* FONT IMPORT */
+ /* -- title cocktail font : Kauschan Script -- */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* -- ingredient font* : Alumni Sans -- */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap');
+
+/* -- rest of text font : Inter -- */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+$primary-color: #181818;
+$secondary-color: #151515;
+$text-color: #f9f9f9;
+$outline: #f9f9f9c5;
+
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30vh;
+  width: 35vw;
   height: 600px;
   background-color: grey;
-  border-radius: 20px;
-  box-shadow:
-    rgba(0, 0, 0, 0.19) 0px 10px 20px,
-    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 40px;
+  box-shadow: 4px 0px 600px 0px $primary-color inset;
   overflow: hidden;
   margin: 50px;
 
@@ -16,5 +29,25 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  img {
+    width: 25vw;
+    height: 25vh;
+    margin-left: 0;
+    margin-top: 35px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px $secondary-color;
+  }
+
+  h2 {
+    font-family: 'Kaushan Script';
+    font-size: 45px;
+    margin-top: 10px;
+  }
+
+  p {
+    font-family: 'Alumni Sans';
+    font-size: 25px;
   }
 }
