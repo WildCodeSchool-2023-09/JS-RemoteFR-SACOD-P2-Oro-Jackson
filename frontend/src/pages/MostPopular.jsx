@@ -25,17 +25,19 @@ function MostPopular() {
     <div className="item" data-value={index} key={cocktail.idDrink}>
       <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
       <h2>{cocktail.strDrink}</h2>
-      <p>{cocktail.strIngredient1}</p>
-      <p>{cocktail.strIngredient2}</p>
-      <p>{cocktail.strIngredient3}</p>
-      <p>{cocktail.strIngredient4}</p>
-      <p>{cocktail.strIngredient5}</p>
-      <p>{cocktail.strIngredient6}</p>
-      <p>{cocktail.strIngredient7}</p>
-      <p>{cocktail.strIngredient8}</p>
-      <p>{cocktail.strIngredient9}</p>
-      <p>{cocktail.strIngredient10}</p>
-      <p>{cocktail.strIngredient11}</p>
+      <div className="ingredient">
+        <p>{cocktail.strIngredient1}</p>
+        <p>{cocktail.strIngredient2}</p>
+        <p>{cocktail.strIngredient3}</p>
+        <p>{cocktail.strIngredient4}</p>
+        <p>{cocktail.strIngredient5}</p>
+        <p>{cocktail.strIngredient6}</p>
+        <p>{cocktail.strIngredient7}</p>
+        <p>{cocktail.strIngredient8}</p>
+        <p>{cocktail.strIngredient9}</p>
+        <p>{cocktail.strIngredient10}</p>
+        <p>{cocktail.strIngredient11}</p>
+      </div>
     </div>
   ));
 

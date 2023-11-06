@@ -17,7 +17,7 @@ $outline: #f9f9f9c5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35vw;
+  width: 20vw;
   height: 600px;
   background-color: grey;
   border-radius: 40px;
@@ -32,7 +32,7 @@ $outline: #f9f9f9c5;
   }
 
   img {
-    width: 25vw;
+    width: 12vw;
     height: 25vh;
     margin-left: 0;
     margin-top: 35px;
@@ -42,12 +42,13 @@ $outline: #f9f9f9c5;
 
   h2 {
     font-family: 'Kaushan Script';
-    font-size: 45px;
-    margin-top: 10px;
+    font-size: 35px;
+    margin-top: 20px;
   }
+}
 
-  p {
-    font-family: 'Alumni Sans';
-    font-size: 25px;
-  }
+.ingredient {
+  font-family: 'Alumni Sans';
+  font-size: 25px;
+  margin-top: 20px;
 }
