@@ -6,6 +6,7 @@ import ErrorPage from "./Error-page";
 import Contact from "./pages/Contact";
 import App from "./App";
 import MakeADrink from "./pages/MakeADrink";
+import MostPopular from "./pages/MostPopular";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "makeadrink/",
     element: <MakeADrink />,
+  },
+  {
+    path: "mostpopular/",
+    element: <MostPopular />,
   },
 ]);
 
