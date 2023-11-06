@@ -1,63 +1,73 @@
-import "../styles/Contact.scss";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import Navbar from "./Navbar";
+import "../styles/Contact.scss";
 
 function Contact() {
   return (
     <>
       <Navbar />
       <div className="form">
-        <form action="" method="get">
-          <h2 className="contact_title">
-            Une question ou une recommandation ?
-          </h2>
-          <h3 className="contact_subtitle">
-            N’hésites surtout pas à nous contacter, on se fera un plaisir de
-            répondre à ta requête !
-          </h3>
-          <div className="input-group">
-            <input
-              type="text"
-              name="name"
-              className="input-group_input"
-              required
-            />
-            <label htmlFor="name" className="input-group_label" id="name">
-              Nom
-            </label>
-          </div>
-          <div className="input-group">
-            <input
-              type="text"
-              name="email"
-              className="input-group_input"
-              required
-            />
-            <label htmlFor="email" className="input-group_label">
-              Adresse e-mail
-            </label>
-          </div>
-          <div className="input-group">
-            <textarea
-              type="textarea"
-              rows="15"
-              name="msg"
-              className="input-group_input"
-              id="msg"
-              required
-            />
-            <label htmlFor="text" className="input-group_label">
-              Votre message
-            </label>
-          </div>
-          <div id="sub_pos">
+        <h2 className="contact_title">Une question ou une recommandation ?</h2>
+        <h3 className="contact_subtitle">
+          N’hésites surtout pas à nous contacter, on se fera un plaisir de
+          répondre à ta requête !
+        </h3>
+        <Box
+          component="form"
+          sx={{
+            maxWidth: "100%",
+            "& .MuiOutlinedInput-root": {
+              "& > fieldset": {
+                borderColor: "#f9f9f9c5",
+                borderRadius: "16px",
+              },
+              "&:hover fieldset": { borderColor: "#f9f9f9" },
+              "&.Mui-focused fieldset": { borderColor: "#f9f9f9" },
+            },
+          }}
+          autoComplete="off"
+        >
+          <TextField
+            required
+            fullWidth
+            margin="normal"
+            id="outlined-required"
+            label="Nom"
+            size="small"
+            type="text"
+          />
+          <br />
+          <TextField
+            required
+            fullWidth
+            margin="normal"
+            id="outlined-required"
+            label="Votre e-mail"
+            size="small"
+            type="email"
+          />
+          <br />
+          <TextField
+            required
+            fullWidth
+            margin="normal"
+            id="outlined-required"
+            className="msg"
+            label="Votre message"
+            size="small"
+            type="text"
+            multiline
+            rows={8}
+          />
+          <div id="sub_pos" href="/confirm_email_send">
             <input className="submit" type="submit" value="Envoyer" />
           </div>
-        </form>
+        </Box>
       </div>
     </>
   );
 }
-
 export default Contact;
 
 /*

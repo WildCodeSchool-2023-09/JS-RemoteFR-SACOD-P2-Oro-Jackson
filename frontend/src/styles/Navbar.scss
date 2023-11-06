@@ -1,9 +1,16 @@
 $primary-color: #181818;
-
 $navbar-color: #181818ce;
 $secondary-color: #151515;
+
 $text-color: #f9f9f9;
 $outline: #f9f9f9c5;
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $primary-color;
+  color: #f9f9f9;
+  margin: 0;
+}
 
 .navbar {
   display: flex;
@@ -12,6 +19,10 @@ $outline: #f9f9f9c5;
   line-height: 3em;
   color: $text-color;
   border-bottom: 0.5px solid $outline;
+}
+
+h1 {
+  font-family: "Kauschan Script", sans-serif;
 }
 
 .navLabel {
