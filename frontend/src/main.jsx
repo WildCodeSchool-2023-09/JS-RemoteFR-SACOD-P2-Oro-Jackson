@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Error-page";
 import Contact from "./pages/Contact";
 import App from "./App";
+import MostPopular from "./pages/MostPopular";
 import MakeADrink from "./pages/MakeADrink";
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "makeadrink/",
     element: <MakeADrink />,
+  },
+  {
+    path: "mostpopular/",
+    element: <MostPopular />,
   },
 ]);
 
