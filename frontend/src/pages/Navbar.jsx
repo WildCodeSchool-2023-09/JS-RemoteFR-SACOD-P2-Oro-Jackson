@@ -23,7 +23,7 @@ function Navbar() {
             </a>
           </li>
           <li className="navSelect" id="hide">
-            <a className="navLabel" href="/makeadrink">
+            <a className="navLabel" href="/random">
               Random
             </a>
           </li>
