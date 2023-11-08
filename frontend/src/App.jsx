@@ -1,6 +1,6 @@
 import Navbar from "./pages/Navbar";
 import videoBackground from "./assets/V.mp4";
-import "./App.css";
+import "./styles/App.scss";
 
 function App() {
   return (
