@@ -36,6 +36,10 @@ function MostPopular() {
       <p>{cocktail.strIngredient9}</p>
       <p>{cocktail.strIngredient10}</p>
       <p>{cocktail.strIngredient11}</p>
+      <p>{cocktail.strIngredient12}</p>
+      <p>{cocktail.strIngredient13}</p>
+      <p>{cocktail.strIngredient14}</p>
+      <p>{cocktail.strIngredient15}</p>
     </div>
   ));
 
@@ -44,6 +48,7 @@ function MostPopular() {
       <Navbar />
       <div>
         <AliceCarousel
+          disableDotsControls
           infinite
           mouseTracking
           items={items}
