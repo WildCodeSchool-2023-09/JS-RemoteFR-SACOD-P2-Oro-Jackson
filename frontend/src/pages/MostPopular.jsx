@@ -10,6 +10,7 @@ function MostPopular() {
     0: { items: 1 },
     568: { items: 2 },
     1024: { items: 3 },
+    1800: { items: 4 },
   };
 
   const API = "https://www.thecocktaildb.com/api/json/v2/9973533/popular.php";
