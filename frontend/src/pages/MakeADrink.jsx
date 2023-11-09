@@ -2,8 +2,20 @@ import { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import axios from "axios";
-import Navbar from "./Navbar";
 import "../styles/MakeADrink.scss";
+import CancelIcon from "@mui/icons-material/Cancel";
+import {
+  OutlinedInput,
+  InputLabel,
+  MenuItem,
+  Select,
+  FormControl,
+  Stack,
+  Chip,
+} from "@mui/material";
+import Navbar from "./Navbar";
+
+const names = ["Vodka", "Gin", "Rum", "Tequila", "Whisky"];
 
 function MakeADrink() {
   const responsive = {
@@ -22,6 +34,8 @@ function MakeADrink() {
     Tequila: false,
     Scotch: false,
   });
+
+  const [selectedNames, setSelectedNames] = useState([]);
 
   const alcoholChecked = Object.keys(alcohol)
     .filter((element) => alcohol[element] === true)
@@ -167,6 +181,82 @@ function MakeADrink() {
           controlsStrategy="alternate"
         />
       </div>
+
+      <FormControl
+        sx={{
+          m: 1,
+          width: 475,
+          color: "white",
+          "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+            borderColor: "white",
+            "&:hover": {
+              color: "white",
+            },
+          },
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: "white",
+          },
+          backgroundColor: "#111111",
+          "& .MuiSvgIcon-root": {
+            color: "white",
+          },
+        }}
+      >
+        <InputLabel
+          sx={{
+            color: "white",
+          }}
+        >
+          Select alcohols
+        </InputLabel>
+        <Select
+          multiple
+          sx={{
+            color: "white",
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: "white",
+            },
+          }}
+          renderValue={(selected) => (
+            <Stack gap={1} direction="row" flexWrap="wrap">
+              {selected.map((value) => (
+                <Chip
+                  sx={{
+                    color: "white",
+                    "& .MuiChip-deleteIcon": {
+                      color: "#f9f9f9;",
+                      "&:hover": {
+                        color: "#f9f9f9c5",
+                      },
+                    },
+                  }}
+                  key={value}
+                  label={value}
+                  onDelete={() =>
+                    setSelectedNames(
+                      selectedNames.filter((item) => item !== value)
+                    )
+                  }
+                  deleteIcon={
+                    <CancelIcon
+                      onMouseDown={(event) => event.stopPropagation()}
+                    />
+                  }
+                />
+              ))}
+            </Stack>
+          )}
+          value={selectedNames}
+          onChange={(e) => setSelectedNames(e.target.value)}
+          input={<OutlinedInput label="Multiple Select" />}
+        >
+          {names.map((name) => (
+            <MenuItem key={name} value={name}>
+              {name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     </div>
   );
 }
