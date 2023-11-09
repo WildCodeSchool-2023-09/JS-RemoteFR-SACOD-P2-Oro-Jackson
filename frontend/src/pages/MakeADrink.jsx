@@ -10,6 +10,7 @@ function MakeADrink() {
     0: { items: 1 },
     568: { items: 2 },
     1024: { items: 3 },
+    1800: { items: 4 },
   };
 
   const API = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=";
@@ -23,11 +24,12 @@ function MakeADrink() {
   });
 
   const alcoholChecked = Object.keys(alcohol)
-    .filter((e) => alcohol[e] === true)
+    .filter((element) => alcohol[element] === true)
     .map((element) => element.toUpperCase());
 
   function handleSubmit(e) {
     e.preventDefault();
+
     axios.get(API).then((response) => {
       setCocktails(response.data.drinks);
     });
@@ -112,39 +114,39 @@ function MakeADrink() {
   return (
     <div>
       <Navbar />
-      <h2>Voici $VARIABLE cocktails à faire avec vos ingrédients</h2>
+      <h2>Voici {items.length} cocktails à faire avec vos ingrédients</h2>
       <div className="right-container" />
       <form onSubmit={handleSubmit}>
         <div>
           <input
             type="checkbox"
-            name="vodka"
+            name="Vodka"
             id="vodka"
             onChange={handleClick}
           />
           <label htmlFor="vodka">Vodka</label>
         </div>
         <div>
-          <input type="checkbox" name="gin" id="gin" onChange={handleClick} />
+          <input type="checkbox" name="Gin" id="gin" onChange={handleClick} />
           <label htmlFor="gin">Gin</label>
         </div>
         <div>
           <input
             type="checkbox"
-            name="tequila"
+            name="Tequila"
             id="tequila"
             onChange={handleClick}
           />
           <label htmlFor="tequila">Tequila</label>
         </div>
         <div>
-          <input type="checkbox" name="rum" id="rum" onChange={handleClick} />
+          <input type="checkbox" name="Rum" id="rum" onChange={handleClick} />
           <label htmlFor="rum">Rum</label>
         </div>
         <div>
           <input
             type="checkbox"
-            name="scotch"
+            name="Scotch"
             id="scotch"
             onChange={handleClick}
           />
