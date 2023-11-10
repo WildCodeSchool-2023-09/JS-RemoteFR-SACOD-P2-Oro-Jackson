@@ -1,40 +1,27 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
-import "./App.css";
+import Navbar from "./pages/Navbar";
+import videoBackground from "./assets/V.mp4";
+import "./styles/App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <Navbar />
+      <div className="home-container">
+        <div className="video-container">
+          <video autoPlay loop muted className="background-video">
+            <source src={videoBackground} type="video/mp4" />
+          </video>
+        </div>
+        <div className="card">
+          <h2>🍹The Cocktail Maker</h2>
+          <p>
+            Il vous reste un fond de Rhum ? Ou vous êtes tout simplement amateur
+            de bons cocktails ? Alors The Cocktail Maker est fait pour vous ! 🍸
+            Choisissez parmi vos alcools et ingrédients favoris et laissez-vous
+            surprendre...
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,54 @@
+/* FONT IMPORT */
+/* -- title cocktail font : Kauschan Script -- */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+/* -- ingredient font* : Alumni Sans -- */
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap");
+
+/* -- rest of text font : Inter -- */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+$primary-color: #181818;
+$secondary-color: #151515;
+$text-color: #f9f9f9;
+$outline: #f9f9f9c5;
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 600px;
+  background-color: grey;
+  border-radius: 40px;
+  box-shadow: 4px 0px 600px 0px $primary-color inset;
+  overflow: hidden;
+  margin: 50px;
+
+  .elementContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin-left: 0px;
+    margin-top: 35px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px $secondary-color;
+  }
+
+  h2 {
+    font-family: "Kaushan Script";
+    font-size: 35px;
+    margin-top: 20px;
+  }
+}
+
+.ingredient {
+  font-family: "Alumni Sans";
+  font-size: 25px;
+  margin-top: 20px;
+}

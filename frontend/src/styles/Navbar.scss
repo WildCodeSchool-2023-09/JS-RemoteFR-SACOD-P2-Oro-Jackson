@@ -1,0 +1,58 @@
+$primary-color: #181818;
+$navbar-color: #181818ce;
+$secondary-color: #151515;
+
+$text-color: #f9f9f9;
+$outline: #f9f9f9c5;
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $primary-color;
+  color: #f9f9f9;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  line-height: 3em;
+  color: $text-color;
+  border-bottom: 0.5px solid $outline;
+}
+
+h1 {
+  font-family: "Kauschan Script", sans-serif;
+}
+
+.navLabel {
+  text-decoration: none;
+  color: $text-color;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em 0 0;
+}
+
+.navSelect {
+  padding: 1em;
+}
+
+.navSelect:hover {
+  background-color: $text-color;
+}
+
+.navSelect:hover a {
+  color: $primary-color;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin: 0 0 0 1.5em;
+}

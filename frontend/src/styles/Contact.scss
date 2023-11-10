@@ -1,0 +1,89 @@
+//Colors
+
+$primary-color: #181818;
+$navbar-color: #181818ce;
+$secondary-color: #151515;
+
+$text-color: #f9f9f9;
+$outline: #f9f9f9c5;
+$transparent: #f9f9f900;
+
+//Center the page with Margin and Width
+
+.form {
+  width: 720px;
+  margin: 50px auto 50px auto;
+}
+
+//Style text titles
+
+.contact_subtitle {
+  font-weight: lighter;
+  margin: 16px 0 16px 0;
+}
+
+#outlined-required {
+  color: $text-color;
+  border-color: #f9f9f9;
+}
+
+#outlined-required-label {
+  color: $text-color;
+}
+
+//Design scrollbar
+
+#outlined-required::-webkit-scrollbar {
+  width: 10px;
+
+  &-thumb {
+    background: $outline;
+    border-radius: 5px;
+
+    &:hover {
+      background: $text-color;
+    }
+  }
+}
+
+//Submit button (Position + Style)
+
+#sub_pos {
+  text-align: right;
+  margin-top: 16px;
+}
+
+.submit {
+  padding: 15px 40px 15px 40px;
+  background: #181818;
+  border: none;
+  outline: 1px solid $outline;
+  box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  font-size: large;
+  font-weight: bold;
+  color: $text-color;
+  transition: 200ms;
+}
+
+.submit:hover {
+  box-shadow: inset 0px 0px 15px #f9f9f966;
+  outline: 1px solid $text-color;
+  padding: 12px 35px 12px 35px;
+  margin: 3px 5px;
+  cursor: pointer;
+  transition:
+    box-shadow 200ms,
+    padding 200ms,
+    margin 200ms;
+}
+
+.submit:active {
+  outline: 2px solid $text-color;
+  padding: 8px 25px 8px 25px;
+  margin: 7px 15px;
+  border-radius: 14px;
+  transition:
+    margin 200ms,
+    padding 200ms;
+}
