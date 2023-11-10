@@ -1,8 +1,19 @@
+//Colors
+
 $primary-color: #181818;
 $secondary-color: #151515;
+$navbar-color: #18181882;
+
+$text-color: #f9f9f9;
+$outline: #f9f9f9c5;
+$transparent: #f9f9f900;
+
+@mixin gradient1 {
+  background: linear-gradient($navbar-color, $secondary-color);
+}
 
 @mixin gradient {
-  background: linear-gradient($primary-color, $secondary-color);
+  background: linear-gradient($secondary-color, $navbar-color);
 }
 
 * {
@@ -10,57 +21,105 @@ $secondary-color: #151515;
 }
 
 .home-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+  @include gradient;
+
   overflow: hidden;
 }
 
+//Video position and style
+
 .video-container {
-  position: relative;
-  width: 100%;
   height: 100%;
-  overflow: hidden;
+  border-radius: 0 50px 50px 0;
 }
 
 .background-video {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  max-width: 100%;
+  height: 90vh;
+  margin: auto;
+  -webkit-animation: videoIn 1500ms forwards;
+  animation: videoIn 1500ms forwards;
+  border-radius: 0 50px 50px 0;
 }
 
+//Video animation
+
+@-webkit-keyframes videoIn {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.9;
+    translate: -5%;
+  }
+}
+
+@keyframes videoIn {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.9;
+    translate: -5%;
+  }
+}
+
+//Card Style
+
 .card {
-  @include gradient;
+  @include gradient1;
 
   position: absolute;
-  right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 20px 40px;
+  top: 25vh;
+  left: 160vh;
+  padding: 30px 40px;
   border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  width: 300px;
+  z-index: 1;
+  width: 280px;
   height: 400px;
-  max-width: 90%;
+  -webkit-animation: cardIn 2s forwards;
+  animation: cardIn 2s forwards;
 }
 
 .card h2 {
-  margin-top: 0;
-  color: #f2e9e9;
-  text-align: center;
-  font-size: 30px;
+  color: $text-color;
+  text-align: left;
+  font-family: "Kaushan Script";
+  font-size: 2em;
+  margin-left: -7px;
 }
 
 .card p {
-  color: #ebebeb;
-  line-height: 2;
+  color: $text-color;
+  line-height: 1.8;
   font-size: larger;
   margin: 10px 0;
+  text-align: justify;
+}
+
+.home_button {
+  margin-top: 25px;
   text-align: center;
+}
+
+//card animation
+
+@-webkit-keyframes cardIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 124.5vh;
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 124.5vh;
+  }
 }

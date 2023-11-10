@@ -16,13 +16,15 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: $primary-color;
-  line-height: 3em;
+  line-height: 2.5em;
   color: $text-color;
   border-bottom: 0.5px solid $outline;
 }
 
 h1 {
-  font-family: "Kauschan Script", sans-serif;
+  font-family: "Kaushan Script";
+  font-size: 2.5em;
+  margin: 15px;
 }
 
 .navLabel {
@@ -49,10 +51,4 @@ h1 {
 
 .navSelect:hover a {
   color: $primary-color;
-}
-
-img {
-  width: 80px;
-  height: 80px;
-  margin: 0 0 0 1.5em;
 }

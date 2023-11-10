@@ -1,11 +1,10 @@
 import "../styles/Navbar.scss";
-import logo from "../assets/logo.png";
 
 function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <img src={logo} alt="logooooo" />
+        <h1>The Cocktail Maker</h1>
         <ul className="navList">
           <li className="navSelect">
             <a className="navLabel" href="/">
