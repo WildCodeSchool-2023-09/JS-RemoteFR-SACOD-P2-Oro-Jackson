@@ -14,6 +14,7 @@ import {
   Chip,
 } from "@mui/material";
 import Navbar from "./Navbar";
+import Loader from "../components/Loader";
 
 const names = ["Vodka", "Gin", "Rum", "Tequila", "Whisky"];
 
@@ -35,9 +36,16 @@ function MakeADrink() {
     Scotch: false,
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     axios.get(API).then((response) => {
       setCocktails(response.data.drinks);
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1500);
+
+      return () => clearTimeout(timer);
     });
   }, []);
 
@@ -197,95 +205,102 @@ function MakeADrink() {
   return (
     <>
       <Navbar />
-      <h2>
-        You can make {items.length}{" "}
-        {items.length > 1 ? "cocktails" : "cocktail"} with these ingredients.
-      </h2>
-      <div className="container">
-        <div className="left-container">
-          <FormControl
-            sx={{
-              m: 1,
-              width: 475,
-              color: "white",
-              "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                borderColor: "white",
-                "&:hover": {
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div>
+          <h2>
+            You can make {items.length}{" "}
+            {items.length > 1 ? "cocktails" : "cocktail"} with these
+            ingredients.
+          </h2>
+          <div className="container">
+            <div className="left-container">
+              <FormControl
+                sx={{
+                  m: 1,
+                  width: 475,
                   color: "white",
-                },
-              },
-              "& .MuiInputLabel-root.Mui-focused": {
-                color: "white",
-              },
-              backgroundColor: "#111111",
-              "& .MuiSvgIcon-root": {
-                color: "white",
-              },
-            }}
-          >
-            <InputLabel
-              sx={{
-                color: "white",
-              }}
-            >
-              Select alcohols
-            </InputLabel>
-            <Select
-              multiple
-              sx={{
-                color: "white",
-                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                  borderColor: "white",
-                },
-              }}
-              renderValue={(selected) => (
-                <Stack gap={1} direction="row" flexWrap="wrap">
-                  {selected.map((value) => (
-                    <Chip
-                      sx={{
-                        color: "white",
-                        "& .MuiChip-deleteIcon": {
-                          color: "#f9f9f9;",
-                          "&:hover": {
-                            color: "#f9f9f9c5",
-                          },
-                        },
-                      }}
-                      key={value}
-                      label={value}
-                      onDelete={() => handleDelete(value)}
-                      deleteIcon={
-                        <CancelIcon
-                          onMouseDown={(event) => event.stopPropagation()}
+                  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "white",
+                    "&:hover": {
+                      color: "white",
+                    },
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "white",
+                  },
+                  backgroundColor: "#111111",
+                  "& .MuiSvgIcon-root": {
+                    color: "white",
+                  },
+                }}
+              >
+                <InputLabel
+                  sx={{
+                    color: "white",
+                  }}
+                >
+                  Select alcohols
+                </InputLabel>
+                <Select
+                  multiple
+                  sx={{
+                    color: "white",
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "white",
+                    },
+                  }}
+                  renderValue={(selected) => (
+                    <Stack gap={1} direction="row" flexWrap="wrap">
+                      {selected.map((value) => (
+                        <Chip
+                          sx={{
+                            color: "white",
+                            "& .MuiChip-deleteIcon": {
+                              color: "#f9f9f9;",
+                              "&:hover": {
+                                color: "#f9f9f9c5",
+                              },
+                            },
+                          }}
+                          key={value}
+                          label={value}
+                          onDelete={() => handleDelete(value)}
+                          deleteIcon={
+                            <CancelIcon
+                              onMouseDown={(event) => event.stopPropagation()}
+                            />
+                          }
                         />
-                      }
-                    />
+                      ))}
+                    </Stack>
+                  )}
+                  value={selectedNames}
+                  onChange={(e) => handleSelect(e)}
+                  input={<OutlinedInput label="Multiple Select" />}
+                >
+                  {names.map((name) => (
+                    <MenuItem key={name} value={name}>
+                      {name}
+                    </MenuItem>
                   ))}
-                </Stack>
-              )}
-              value={selectedNames}
-              onChange={(e) => handleSelect(e)}
-              input={<OutlinedInput label="Multiple Select" />}
-            >
-              {names.map((name) => (
-                <MenuItem key={name} value={name}>
-                  {name}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="right-container">
+              <AliceCarousel
+                disableDotsControls
+                infinite
+                mouseTracking
+                items={items}
+                responsive={responsive}
+                controlsStrategy="alternate"
+              />
+            </div>
+          </div>
         </div>
-        <div className="right-container">
-          <AliceCarousel
-            disableDotsControls
-            infinite
-            mouseTracking
-            items={items}
-            responsive={responsive}
-            controlsStrategy="alternate"
-          />
-        </div>
-      </div>
+      )}
     </>
   );
 }

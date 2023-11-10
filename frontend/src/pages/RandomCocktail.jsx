@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 function RandomCocktail() {
   const [randCocktail, setRandCocktail] = useState(null);
@@ -14,6 +15,7 @@ function RandomCocktail() {
   };
   return (
     <div>
+      <Loader />
       <button type="button" onClick={displayRandomCocktail}>
         Click me for random
       </button>
