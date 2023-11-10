@@ -77,11 +77,11 @@ function MakeADrink() {
               </div>
               <div className="measure_ingredient">
                 <p>{item.strMeasure2}&nbsp;</p>
-                <p>{item.strIngredient3}</p>
+                <p>{item.strIngredient2}</p>
               </div>
               <div className="measure_ingredient">
                 <p>{item.strMeasure3}&nbsp;</p>
-                <p>{item.strIngredient2}</p>
+                <p>{item.strIngredient3}</p>
               </div>
               <div className="measure_ingredient">
                 <p>{item.strMeasure4}&nbsp;</p>
@@ -131,7 +131,7 @@ function MakeADrink() {
               filter.strIngredient1.toUpperCase().includes(alcoholChecked[3]) ||
               filter.strIngredient1.toUpperCase().includes(alcoholChecked[4]) ||
               filter.strIngredient2.toUpperCase().includes(alcoholChecked[0]) ||
-              filter.strIngredient2.toUpperCase().includes(alcoholChecked[2]) ||
+              filter.strIngredient2.toUpperCase().includes(alcoholChecked[1]) ||
               filter.strIngredient2.toUpperCase().includes(alcoholChecked[2]) ||
               filter.strIngredient2.toUpperCase().includes(alcoholChecked[3]) ||
               filter.strIngredient2.toUpperCase().includes(alcoholChecked[4])
@@ -148,11 +148,11 @@ function MakeADrink() {
                 </div>
                 <div className="measure_ingredient">
                   <p>{item.strMeasure2}&nbsp;</p>
-                  <p>{item.strIngredient3}</p>
+                  <p>{item.strIngredient2}</p>
                 </div>
                 <div className="measure_ingredient">
                   <p>{item.strMeasure3}&nbsp;</p>
-                  <p>{item.strIngredient2}</p>
+                  <p>{item.strIngredient3}</p>
                 </div>
                 <div className="measure_ingredient">
                   <p>{item.strMeasure4}&nbsp;</p>
@@ -197,7 +197,10 @@ function MakeADrink() {
   return (
     <>
       <Navbar />
-      <h2>Voici {items.length} cocktails à faire avec vos ingrédients</h2>
+      <h2>
+        You can make {items.length}{" "}
+        {items.length > 1 ? "cocktails" : "cocktail"} with these ingredients.
+      </h2>
       <div className="container">
         <div className="left-container">
           <FormControl
