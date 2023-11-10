@@ -261,7 +261,7 @@ function MakeADrink() {
                 </Stack>
               )}
               value={selectedNames}
-              onChange={() => handleSelect}
+              onChange={(e) => handleSelect(e)}
               input={<OutlinedInput label="Multiple Select" />}
             >
               {names.map((name) => (
