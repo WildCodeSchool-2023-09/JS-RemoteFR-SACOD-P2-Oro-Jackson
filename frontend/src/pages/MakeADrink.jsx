@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import Navbar from "./Navbar";
 import Loader from "../components/Loader";
+import LikeButton from "../components/Like";
 
 const names = ["Vodka", "Gin", "Rum", "Tequila", "Whisky"];
 
@@ -127,6 +128,9 @@ function MakeADrink() {
                 <p>{item.strMeasure12}&nbsp;</p>
                 <p>{item.strIngredient12}</p>
               </div>
+              <div>
+                <LikeButton />
+              </div>
             </div>
           );
         })
@@ -197,6 +201,9 @@ function MakeADrink() {
                 <div className="measure_ingredient">
                   <p>{item.strMeasure12}&nbsp;</p>
                   <p>{item.strIngredient12}</p>
+                </div>
+                <div>
+                  <LikeButton />
                 </div>
               </div>
             );
