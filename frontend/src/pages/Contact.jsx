@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../styles/Contact.scss";
 
@@ -8,10 +9,10 @@ function Contact() {
     <>
       <Navbar />
       <div className="form">
-        <h2 className="contact_title">Une question ou une recommandation ?</h2>
+        <h2 className="contact_title">A question or recommendation?</h2>
         <h3 className="contact_subtitle">
-          N’hésites surtout pas à nous contacter, on se fera un plaisir de
-          répondre à ta requête !
+          Do not hesitate to contact us, we will be happy to answer your
+          request!
         </h3>
         <Box
           component="form"
@@ -33,7 +34,7 @@ function Contact() {
             fullWidth
             margin="normal"
             id="outlined-required"
-            label="Nom"
+            label="Name"
             size="small"
             type="text"
           />
@@ -43,7 +44,7 @@ function Contact() {
             fullWidth
             margin="normal"
             id="outlined-required"
-            label="Votre e-mail"
+            label="E-mail adress"
             size="small"
             type="email"
           />
@@ -54,15 +55,17 @@ function Contact() {
             margin="normal"
             id="outlined-required"
             className="msg"
-            label="Votre message"
+            label="Your message"
             size="small"
             type="text"
             multiline
             rows={8}
           />
-          <div id="sub_pos" href="/confirm_email_send">
-            <input className="submit" type="submit" value="Envoyer" />
-          </div>
+          <Link to="/confirmpage">
+            <div id="sub_pos" href="/confirm_email_send">
+              <input className="submit" type="submit" value="Send" />
+            </div>
+          </Link>
         </Box>
       </div>
     </>
