@@ -16,7 +16,7 @@ import {
 import Navbar from "./Navbar";
 import Loader from "../components/Loader";
 
-const names = ["Vodka", "Gin", "Rum", "Tequila", "Whisky"];
+const names = ["Vodka", "Gin", "Rum", "Tequila", "Scotch"];
 
 function MakeADrink() {
   const responsive = {
