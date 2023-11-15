@@ -15,7 +15,7 @@ function LikeButton() {
   };
 
   return (
-    <div>
+    <div className="likeContainer">
       <label className="ui-like">
         <input type="checkbox" onClick={handleClick} />
         <div className="like">
@@ -31,8 +31,8 @@ function LikeButton() {
             </g>
           </svg>
         </div>
-        <span className="likes-counter">{`${likes}`}</span>
       </label>
+      <span className="likes-counter">{`${likes}`}</span>
     </div>
   );
 }
