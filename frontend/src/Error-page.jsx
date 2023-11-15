@@ -2,6 +2,7 @@ import { useRouteError } from "react-router-dom";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import animation404 from "./assets/404animation.json";
 import "./styles/Error.scss";
+import Navbar from "./pages/Navbar";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -9,6 +10,7 @@ export default function ErrorPage() {
 
   return (
     <div className="errorPage">
+      <Navbar />
       <div id="error-page" className="textError">
         <h1>Oops! Cocktail not found!</h1>
         <p>You shaked the wrong cocktail</p>

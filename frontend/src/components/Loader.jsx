@@ -7,7 +7,7 @@ function Loader() {
       autoplay
       loop
       src={animation}
-      style={{ height: "300px", width: "300px" }}
+      style={{ height: "500px", width: "500px" }}
     >
       <Controls
         visible={false}

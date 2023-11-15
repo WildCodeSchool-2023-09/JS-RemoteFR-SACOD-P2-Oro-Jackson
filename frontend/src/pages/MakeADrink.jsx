@@ -193,7 +193,7 @@ function MakeADrink() {
     <>
       <Navbar />
       {isLoading ? (
-        <Loader />
+        <Loader className="loaderMAD" />
       ) : (
         <div>
           <h2 className="cocktailLengh">
