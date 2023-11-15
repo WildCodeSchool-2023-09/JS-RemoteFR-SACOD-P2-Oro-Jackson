@@ -15,6 +15,8 @@ import {
 } from "@mui/material";
 import Navbar from "./Navbar";
 import Loader from "../components/Loader";
+import LikeButton from "../components/Like";
+import shareButton from "../assets/share.svg";
 
 const names = ["Vodka", "Gin", "Rum", "Tequila", "Scotch"];
 
@@ -24,6 +26,7 @@ function MakeADrink() {
     568: { items: 2 },
     1024: { items: 3 },
     1800: { items: 4 },
+    2200: { items: 5 },
   };
 
   const API = "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=";
@@ -77,7 +80,11 @@ function MakeADrink() {
       ? cocktails.map((item, index) => {
           return (
             <div className="item" data-value={index} key={item.idDrink}>
-              <img src={item.strDrinkThumb} alt={item.strDrink} />
+              <img
+                src={item.strDrinkThumb}
+                alt={item.strDrink}
+                className="cardimg"
+              />
               <h2>{item.strDrink}</h2>
               <div className="measure_ingredient">
                 <p>{item.strMeasure1}&nbsp;</p>
@@ -111,21 +118,9 @@ function MakeADrink() {
                 <p>{item.strMeasure8}&nbsp;</p>
                 <p>{item.strIngredient8}</p>
               </div>
-              <div className="measure_ingredient">
-                <p>{item.strMeasure9}&nbsp;</p>
-                <p>{item.strIngredient9}</p>
-              </div>
-              <div className="measure_ingredient">
-                <p>{item.strMeasure10}&nbsp;</p>
-                <p>{item.strIngredient10}</p>
-              </div>
-              <div className="measure_ingredient">
-                <p>{item.strMeasure11}&nbsp;</p>
-                <p>{item.strIngredient11}</p>
-              </div>
-              <div className="measure_ingredient">
-                <p>{item.strMeasure12}&nbsp;</p>
-                <p>{item.strIngredient12}</p>
+              <div className="likeAndShareContainer">
+                <LikeButton className="likeIcon" />
+                <img src={shareButton} alt="share" className="shareIcon" />
               </div>
             </div>
           );
@@ -148,7 +143,11 @@ function MakeADrink() {
           .map((item, index) => {
             return (
               <div className="item" data-value={index} key={item.idDrink}>
-                <img src={item.strDrinkThumb} alt={item.strDrink} />
+                <img
+                  src={item.strDrinkThumb}
+                  alt={item.strDrink}
+                  className="cardimg"
+                />
                 <h2>{item.strDrink}</h2>
                 <div className="measure_ingredient">
                   <p>{item.strMeasure1}&nbsp;</p>
@@ -182,21 +181,9 @@ function MakeADrink() {
                   <p>{item.strMeasure8}&nbsp;</p>
                   <p>{item.strIngredient8}</p>
                 </div>
-                <div className="measure_ingredient">
-                  <p>{item.strMeasure9}&nbsp;</p>
-                  <p>{item.strIngredient9}</p>
-                </div>
-                <div className="measure_ingredient">
-                  <p>{item.strMeasure10}&nbsp;</p>
-                  <p>{item.strIngredient10}</p>
-                </div>
-                <div className="measure_ingredient">
-                  <p>{item.strMeasure11}&nbsp;</p>
-                  <p>{item.strIngredient11}</p>
-                </div>
-                <div className="measure_ingredient">
-                  <p>{item.strMeasure12}&nbsp;</p>
-                  <p>{item.strIngredient12}</p>
+                <div className="likeAndShareContainer">
+                  <LikeButton className="likeIcon" />
+                  <img src={shareButton} alt="share" className="shareIcon" />
                 </div>
               </div>
             );

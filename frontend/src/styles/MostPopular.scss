@@ -17,8 +17,11 @@ $outline: #f9f9f9c5;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  justify-content: space-between;
   width: 350px;
-  height: 600px;
+  height: 700px;
+
   background-color: grey;
   border-radius: 40px;
   box-shadow: 4px 0px 600px 0px $primary-color inset;
@@ -31,7 +34,9 @@ $outline: #f9f9f9c5;
     gap: 2rem;
   }
 
-  img {
+
+  .cardimg {
+
     width: 265px;
     height: 265px;
     margin-left: 0px;

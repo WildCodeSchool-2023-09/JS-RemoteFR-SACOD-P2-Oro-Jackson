@@ -55,3 +55,18 @@ $transparent: #f9f9f900;
     margin 200ms,
     padding 200ms;
 }
+
+.likeAndShareContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.shareIcon {
+  padding-bottom: 0.5rem;
+}
+
+.likeIcon {
+  display: flex;
+}
