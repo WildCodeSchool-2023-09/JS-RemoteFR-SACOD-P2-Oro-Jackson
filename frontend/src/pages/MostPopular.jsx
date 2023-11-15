@@ -1,11 +1,12 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import "../styles/MostPopular.scss";
 import LikeButton from "../components/Like";
 import shareButton from "../assets/share.svg";
+import arrow from "../assets/arrow.png";
 
 function MostPopular() {
   const responsive = {
@@ -24,6 +25,8 @@ function MostPopular() {
       setCocktails(response.data.drinks);
     });
   }, []);
+
+  const carousel = useRef(AliceCarousel);
 
   const items = cocktails.map((cocktail, index) => (
     <div className="item" data-value={index} key={cocktail.idDrink}>
@@ -77,13 +80,31 @@ function MostPopular() {
       <Navbar />
       <div>
         <AliceCarousel
+          disableButtonsControls
           infinite
           mouseTracking
           items={items}
           responsive={responsive}
+          ref={carousel}
           controlsStrategy="default"
           keyboardNavigation
         />
+        <div key="btns" className="b-refs-buttons">
+          <button
+            onClick={(e) => carousel?.current?.slidePrev(e)}
+            type="submit"
+            className="leftButton"
+          >
+            <img className="arrow arrowLeft" src={arrow} alt="arrow_left" />
+          </button>
+          <button
+            onClick={(e) => carousel?.current?.slideNext(e)}
+            type="submit"
+            className="rightButton"
+          >
+            <img className="arrow" src={arrow} alt="arrow_right" />
+          </button>
+        </div>
       </div>
     </div>
   );
