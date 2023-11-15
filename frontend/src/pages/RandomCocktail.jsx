@@ -33,20 +33,45 @@ function RandomCocktail() {
 
       {randCocktail && (
         <div className="item random">
-          <img src={randCocktail.strDrinkThumb} alt={randCocktail.strDrink} />
+          <img
+            src={randCocktail.strDrinkThumb}
+            alt={randCocktail.strDrink}
+            className="cardimg"
+          />
           <h2>{randCocktail.strDrink}</h2>
           <div className="ingredient">
-            <p>{randCocktail.strIngredient1}</p>
-            <p>{randCocktail.strIngredient2}</p>
-            <p>{randCocktail.strIngredient3}</p>
-            <p>{randCocktail.strIngredient4}</p>
-            <p>{randCocktail.strIngredient5}</p>
-            <p>{randCocktail.strIngredient6}</p>
-            <p>{randCocktail.strIngredient7}</p>
-            <p>{randCocktail.strIngredient8}</p>
-            <p>{randCocktail.strIngredient9}</p>
-            <p>{randCocktail.strIngredient10}</p>
-            <p>{randCocktail.strIngredient11}</p>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure1}&nbsp;</p>
+              <p>{randCocktail.strIngredient1}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure2}&nbsp;</p>
+              <p>{randCocktail.strIngredient2}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure3}&nbsp;</p>
+              <p>{randCocktail.strIngredient3}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure4}&nbsp;</p>
+              <p>{randCocktail.strIngredient4}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure5}&nbsp;</p>
+              <p>{randCocktail.strIngredient5}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure6}&nbsp;</p>
+              <p>{randCocktail.strIngredient6}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure7}&nbsp;</p>
+              <p>{randCocktail.strIngredient7}</p>
+            </div>
+            <div className="measure_ingredient">
+              <p>{randCocktail.strMeasure8}&nbsp;</p>
+              <p>{randCocktail.strIngredient8}</p>
+            </div>
           </div>
         </div>
       )}
