@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import axios from "axios";
@@ -17,6 +17,7 @@ import Navbar from "./Navbar";
 import Loader from "../components/Loader";
 import LikeButton from "../components/Like";
 import shareButton from "../assets/share.svg";
+import arrow from "../assets/arrow.png";
 
 const names = ["Vodka", "Gin", "Rum", "Tequila", "Scotch"];
 
@@ -51,6 +52,8 @@ function MakeADrink() {
       return () => clearTimeout(timer);
     });
   }, []);
+
+  const carousel = useRef(AliceCarousel);
 
   const [selectedNames, setSelectedNames] = useState([]);
 
@@ -193,13 +196,12 @@ function MakeADrink() {
     <>
       <Navbar />
       {isLoading ? (
-        <Loader />
+        <Loader className="loaderMAD" />
       ) : (
         <div>
-          <h2>
+          <h2 className="cocktailLengh">
             You can make {items.length}{" "}
-            {items.length > 1 ? "cocktails" : "cocktail"} with these
-            ingredients.
+            {items.length > 1 ? "cocktails" : "cocktail"} with these ingredients
           </h2>
           <div className="container">
             <div className="left-container">
@@ -278,12 +280,35 @@ function MakeADrink() {
             <div className="right-container">
               <AliceCarousel
                 disableDotsControls
+                disableButtonsControls
                 infinite
                 mouseTracking
                 items={items}
                 responsive={responsive}
-                controlsStrategy="alternate"
+                controlsStrategy="default"
+                keyboardNavigation
+                ref={carousel}
               />
+              <div key="btns" className="b-refs-buttons">
+                <button
+                  onClick={(e) => carousel?.current?.slidePrev(e)}
+                  type="submit"
+                  className="leftButton"
+                >
+                  <img
+                    className="arrow arrowLeft"
+                    src={arrow}
+                    alt="arrow_left"
+                  />
+                </button>
+                <button
+                  onClick={(e) => carousel?.current?.slideNext(e)}
+                  type="submit"
+                  className="rightButton"
+                >
+                  <img className="arrow" src={arrow} alt="arrow_right" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

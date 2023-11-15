@@ -13,6 +13,7 @@ function MostPopular() {
     568: { items: 2 },
     1024: { items: 3 },
     1800: { items: 4 },
+    2200: { items: 5 },
   };
 
   const API = "https://www.thecocktaildb.com/api/json/v2/9973533/popular.php";
@@ -80,7 +81,8 @@ function MostPopular() {
           mouseTracking
           items={items}
           responsive={responsive}
-          controlsStrategy="alternate"
+          controlsStrategy="default"
+          keyboardNavigation
         />
       </div>
     </div>

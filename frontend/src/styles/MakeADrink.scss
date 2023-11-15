@@ -10,6 +10,7 @@ $transparent: #f9f9f900;
   display: flex;
   flex-direction: column;
 }
+
 .left-container {
   display: flex;
   flex-direction: column;
@@ -19,6 +20,12 @@ $transparent: #f9f9f900;
 .measure_ingredient {
   display: flex;
   flex-direction: row;
+}
+
+.cocktailLengh {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .submit {
@@ -69,4 +76,51 @@ $transparent: #f9f9f900;
 
 .likeIcon {
   display: flex;
+}
+
+.lf-player-container {
+  margin-top: 18vh;
+}
+
+.leftButton {
+  text-align: left;
+  left: 0;
+}
+
+.rightButton {
+  text-align: right;
+  right: 0;
+}
+
+.leftButton,
+.rightButton {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px 5px;
+  top: 65vh;
+  position: absolute;
+}
+
+.b-refs-buttons {
+  button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+  }
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+}
+
+.arrowLeft {
+  transform: rotate(180deg);
+}
+
+.alice-carousel__stage-item {
+  padding-left: 2rem;
 }

@@ -21,8 +21,8 @@ function App() {
             <br />
             Then, The Cocktail Maker is made for you !
             <br />
-            Choose from your favorite alcohols and ingredients and let yourself
-            be surprised... 🤫
+            Choose from your favorite alcohols and let yourself be surprised...
+            🤫
           </p>
           <form className="home_button">
             <Link to="/makeadrink">
