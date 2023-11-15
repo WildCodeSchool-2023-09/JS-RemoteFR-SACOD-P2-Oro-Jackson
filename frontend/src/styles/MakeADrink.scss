@@ -10,6 +10,7 @@ $transparent: #f9f9f900;
   display: flex;
   flex-direction: column;
 }
+
 .left-container {
   display: flex;
   flex-direction: column;
@@ -19,6 +20,12 @@ $transparent: #f9f9f900;
 .measure_ingredient {
   display: flex;
   flex-direction: row;
+}
+
+.cocktailLengh {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .submit {

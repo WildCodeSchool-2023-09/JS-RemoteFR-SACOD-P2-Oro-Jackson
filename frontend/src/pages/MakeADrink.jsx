@@ -196,10 +196,9 @@ function MakeADrink() {
         <Loader />
       ) : (
         <div>
-          <h2>
+          <h2 className="cocktailLengh">
             You can make {items.length}{" "}
-            {items.length > 1 ? "cocktails" : "cocktail"} with these
-            ingredients.
+            {items.length > 1 ? "cocktails" : "cocktail"} with these ingredients
           </h2>
           <div className="container">
             <div className="left-container">
