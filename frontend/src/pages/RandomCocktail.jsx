@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import Navbar from "./Navbar";
-import "../styles/MakeADrink.scss";
-import "../styles/MostPopular.scss";
+import Loader from "../components/Loader";
 
 function RandomCocktail() {
   const [randCocktail, setRandCocktail] = useState(null);
@@ -15,21 +13,12 @@ function RandomCocktail() {
         console.info(err);
       });
   };
-  useEffect(() => {
-    displayRandomCocktail();
-  }, []);
   return (
     <div>
-      <Navbar />
-      <div className="random_button">
-        <button
-          className="submit"
-          type="button"
-          onClick={displayRandomCocktail}
-        >
-          Click me for random
-        </button>
-      </div>
+      <Loader />
+      <button type="button" onClick={displayRandomCocktail}>
+        Click me for random
+      </button>
 
       {randCocktail && (
         <div className="item random">
