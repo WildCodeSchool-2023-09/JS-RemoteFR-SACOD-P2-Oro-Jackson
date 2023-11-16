@@ -1,38 +1,64 @@
 import "../styles/Navbar.scss";
 
+function showMenu() {
+  console.error("coucou");
+}
+
 function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <h1>The Cocktail Maker</h1>
+        <a className="h1" href="/">
+          <h1>The Cocktail Maker</h1>
+        </a>
         <ul className="navList">
-          <li className="navSelect">
-            <a className="navLabel" href="/">
-              Home
-            </a>
-          </li>
-          <li className="navSelect">
-            <a className="navLabel" href="/makeadrink">
-              Make a drink
-            </a>
-          </li>
-          <li className="navSelect" id="hide">
-            <a className="navLabel" href="/mostpopular">
+          <a className="navLabel" href="/">
+            <li className="navSelect">Home</li>
+          </a>
+          <a className="navLabel" href="/makeadrink">
+            <li className="navSelect">Make a drink</li>
+          </a>
+          <a className="navLabel" href="/mostpopular">
+            <li className="navSelect" id="hide">
               Most popular
-            </a>
-          </li>
-          <li className="navSelect" id="hide">
-            <a className="navLabel" href="/random">
+            </li>
+          </a>
+          <a className="navLabel" href="/random">
+            <li className="navSelect" id="hide">
               Random
-            </a>
-          </li>
-          <li className="navSelect">
-            <a className="navLabel" href="/contacts">
-              Contact
-            </a>
-          </li>
+            </li>
+          </a>
+          <a className="navLabel" href="/contacts">
+            <li className="navSelect">Contact</li>
+          </a>
         </ul>
+        <div
+          className="menuBurger-icon"
+          onClick={showMenu}
+          aria-hidden="true"
+        />
       </nav>
+      <ul className="menuBurger">
+        <a className="navLabel" href="/">
+          <li className="navSelect">Home</li>
+        </a>
+        <a className="navLabel" href="/makeadrink">
+          <li className="navSelect">Make a drink</li>
+        </a>
+        <a className="navLabel" href="/mostpopular">
+          <li className="navSelect" id="hide">
+            Most popular
+          </li>
+        </a>
+        <a className="navLabel" href="/random">
+          <li className="navSelect" id="hide">
+            Random
+          </li>
+        </a>
+        <a className="navLabel" href="/contacts">
+          <li className="navSelect">Contact</li>
+        </a>
+      </ul>
     </div>
   );
 }
