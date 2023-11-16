@@ -5,6 +5,8 @@ $secondary-color: #151515;
 $text-color: #f9f9f9;
 $outline: #f9f9f9c5;
 
+//Style the body for all the website
+
 body {
   font-family: "Inter", sans-serif;
   background-color: $primary-color;
@@ -12,17 +14,23 @@ body {
   margin: 0;
 }
 
+//Style Navbar Desktop
+
 .navbar {
   display: flex;
   justify-content: space-between;
   background-color: $primary-color;
-  line-height: 3em;
+  line-height: 2.5em;
   color: $text-color;
   border-bottom: 0.5px solid $outline;
 }
 
-h1 {
-  font-family: "Kauschan Script", sans-serif;
+.h1 {
+  all: unset;
+  font-family: "Kaushan Script";
+  font-size: 1.8em;
+  margin: 15px;
+  cursor: pointer;
 }
 
 .navLabel {
@@ -45,14 +53,82 @@ h1 {
 
 .navSelect:hover {
   background-color: $text-color;
-}
-
-.navSelect:hover a {
   color: $primary-color;
 }
 
-img {
-  width: 80px;
-  height: 80px;
-  margin: 0 0 0 1.5em;
+//Hide the burger menu
+
+.menuBurger-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.menuBurger-icon-active {
+  cursor: pointer;
+  display: none;
+}
+
+.menuBurger {
+  display: none;
+}
+
+//Responsive size 1
+
+@media screen and (max-width: 950px) {
+  //Navbar style
+
+  .navbar {
+    line-height: calc(1em + 2vw);
+  }
+  .h1 {
+    font-size: calc(0.5em + 2vw);
+  }
+  .navList {
+    display: none;
+  }
+
+  //Show burger
+
+  .menuBurger-icon {
+    margin-right: 15px;
+    display: block;
+    font-size: calc(2em + 2vw);
+    margin-top: 10px;
+  }
+  .menuBurger-icon:before {
+    content: "\2630";
+  }
+  .menuBurger-active {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: $navbar-color;
+  }
+  .navSelect {
+    border-bottom: 0.5px solid $outline;
+  }
+
+  //Style on click
+
+  .menuBurger-icon-active {
+    margin: 15px;
+    display: block;
+    font-size: calc(2em + 2vw);
+  }
+  .menuBurger-icon-active:before {
+    content: "\2715";
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    line-height: 1.5em;
+  }
+  .h1 {
+    font-size: 1em;
+  }
 }
