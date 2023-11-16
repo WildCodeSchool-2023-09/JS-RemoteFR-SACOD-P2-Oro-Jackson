@@ -1,7 +1,11 @@
 import "../styles/Navbar.scss";
 
 function showMenu() {
-  console.error("coucou");
+  const menuBurgerIcon = document.getElementsByClassName("menuBurger-icon");
+  const menuBurger = document.getElementsByClassName("menuBurger");
+
+  menuBurgerIcon[0].classList.toggle("menuBurger-icon-active");
+  menuBurger[0].classList.toggle("menuBurger-active");
 }
 
 function Navbar() {
