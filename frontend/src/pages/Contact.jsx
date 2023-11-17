@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import "../styles/Contact.scss";
 
@@ -61,11 +60,9 @@ function Contact() {
             multiline
             rows={8}
           />
-          <Link to="/confirmpage">
-            <div id="sub_pos" href="/confirm_email_send">
-              <input className="submit" type="submit" value="Send" />
-            </div>
-          </Link>
+          <div id="sub_pos">
+            <input className="submit" type="submit" value="Send" />
+          </div>
         </Box>
       </div>
     </>
