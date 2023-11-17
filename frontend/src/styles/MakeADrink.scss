@@ -121,6 +121,17 @@ $transparent: #f9f9f900;
   transform: rotate(180deg);
 }
 
-.alice-carousel__stage-item {
-  padding-left: 2rem;
+@media screen and (max-width: 600px) {
+  .select {
+    max-width: 80vw;
+  }
+  .cocktailLengh {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: medium;
+  }
+  .lf-player-container {
+    margin-top: 5vh;
+    margin-left: -6vh;
+  }
 }

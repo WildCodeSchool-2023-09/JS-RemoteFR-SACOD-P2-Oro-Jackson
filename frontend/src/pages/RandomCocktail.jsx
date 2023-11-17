@@ -3,6 +3,8 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import "../styles/MakeADrink.scss";
 import "../styles/MostPopular.scss";
+import LikeButton from "../components/Like";
+import shareButton from "../assets/share.svg";
 
 function RandomCocktail() {
   const [randCocktail, setRandCocktail] = useState(null);
@@ -72,6 +74,10 @@ function RandomCocktail() {
               <p>{randCocktail.strMeasure8}&nbsp;</p>
               <p>{randCocktail.strIngredient8}</p>
             </div>
+          </div>
+          <div className="likeAndShareContainer">
+            <LikeButton className="likeIcon" />
+            <img src={shareButton} alt="share" className="shareIcon" />
           </div>
         </div>
       )}

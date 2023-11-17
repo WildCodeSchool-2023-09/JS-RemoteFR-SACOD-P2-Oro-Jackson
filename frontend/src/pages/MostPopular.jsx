@@ -78,7 +78,8 @@ function MostPopular() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="mostPopularCarousel">
+        <h2>Here are the most popular cocktails!</h2>
         <AliceCarousel
           disableButtonsControls
           infinite
