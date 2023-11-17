@@ -206,6 +206,7 @@ function MakeADrink() {
           <div className="container">
             <div className="left-container">
               <FormControl
+                className="select"
                 sx={{
                   m: 1,
                   width: 475,
