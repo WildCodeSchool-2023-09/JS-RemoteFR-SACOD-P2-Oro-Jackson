@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Navbar from "./Navbar";
 import "../styles/MakeADrink.scss";
 import "../styles/MostPopular.scss";
 import LikeButton from "../components/Like";
@@ -22,7 +21,6 @@ function RandomCocktail() {
   }, []);
   return (
     <div>
-      <Navbar />
       <div className="random_button">
         <button
           className="submit"

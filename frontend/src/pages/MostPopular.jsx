@@ -2,7 +2,6 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/scss/alice-carousel.scss";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import Navbar from "./Navbar";
 import "../styles/MostPopular.scss";
 import LikeButton from "../components/Like";
 import shareButton from "../assets/share.svg";
@@ -77,7 +76,6 @@ function MostPopular() {
 
   return (
     <div>
-      <Navbar />
       <div className="mostPopularCarousel">
         <h2>Here are the most popular cocktails!</h2>
         <AliceCarousel

@@ -1,4 +1,5 @@
 import "../styles/Navbar.scss";
+import { Link } from "react-router-dom";
 
 function showMenu() {
   const menuBurgerIcon = document.getElementsByClassName("menuBurger-icon");
@@ -12,29 +13,29 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <a className="h1" href="/">
+        <Link className="h1" to="/">
           <h1>The Cocktail Maker</h1>
-        </a>
+        </Link>
         <ul className="navList">
-          <a className="navLabel" href="/">
+          <Link className="navLabel" to="/">
             <li className="navSelect">Home</li>
-          </a>
-          <a className="navLabel" href="/makeadrink">
+          </Link>
+          <Link className="navLabel" to="makeadrink">
             <li className="navSelect">Make a drink</li>
-          </a>
-          <a className="navLabel" href="/mostpopular">
+          </Link>
+          <Link className="navLabel" to="mostpopular">
             <li className="navSelect" id="hide">
               Most popular
             </li>
-          </a>
-          <a className="navLabel" href="/random">
+          </Link>
+          <Link className="navLabel" to="random">
             <li className="navSelect" id="hide">
               Random
             </li>
-          </a>
-          <a className="navLabel" href="/contacts">
+          </Link>
+          <Link className="navLabel" to="contacts">
             <li className="navSelect">Contact</li>
-          </a>
+          </Link>
         </ul>
         <div
           className="menuBurger-icon"
@@ -43,25 +44,25 @@ function Navbar() {
         />
       </nav>
       <ul className="menuBurger">
-        <a className="navLabel" href="/">
+        <Link className="navLabel" to="/">
           <li className="navSelect">Home</li>
-        </a>
-        <a className="navLabel" href="/makeadrink">
+        </Link>
+        <Link className="navLabel" to="makeadrink">
           <li className="navSelect">Make a drink</li>
-        </a>
-        <a className="navLabel" href="/mostpopular">
+        </Link>
+        <Link className="navLabel" to="mostpopular">
           <li className="navSelect" id="hide">
             Most popular
           </li>
-        </a>
-        <a className="navLabel" href="/random">
+        </Link>
+        <Link className="navLabel" to="random">
           <li className="navSelect" id="hide">
             Random
           </li>
-        </a>
-        <a className="navLabel" href="/contacts">
+        </Link>
+        <Link className="navLabel" to="contacts">
           <li className="navSelect">Contact</li>
-        </a>
+        </Link>
       </ul>
     </div>
   );

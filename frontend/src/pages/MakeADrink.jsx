@@ -13,7 +13,6 @@ import {
   Stack,
   Chip,
 } from "@mui/material";
-import Navbar from "./Navbar";
 import Loader from "../components/Loader";
 import LikeButton from "../components/Like";
 import shareButton from "../assets/share.svg";
@@ -193,8 +192,7 @@ function MakeADrink() {
           });
 
   return (
-    <>
-      <Navbar />
+    <div>
       {isLoading ? (
         <Loader className="loaderMAD" />
       ) : (
@@ -314,7 +312,7 @@ function MakeADrink() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
